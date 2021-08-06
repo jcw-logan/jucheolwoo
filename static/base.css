@@ -1,0 +1,26 @@
+.jucheolwoo_logo{font-family: 'Shadows Into Light', cursive;}
+
+.jucheolwoo_footer_button{
+font-size: .6rem;
+}
+
+@media screen and (max-width:500px) {
+
+    html
+        {
+        font-size: 13px;
+        }
+    }
+
+a { color: black;}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+.jcw_header_nav{
+ margin: 0rem 0.5rem;
+}
+.jcw_header_navbar{
+ margin: 1rem 0;
+}

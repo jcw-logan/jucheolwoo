@@ -1,0 +1,36 @@
+
+
+<div style="text-align:center; margin: 2rem 0 ;" >
+    <div class="jucheolwoo_logo">
+        <h1>jucheolwoo</h1>
+    </div>
+    <div class="jcw_header_navbar" >
+        <a href="{% url 'articleapp:list' %}"class="jcw_header_nav">
+            <span>Articles</span>
+        </a>
+         <a href="{% url 'projectapp:list' %}"class="jcw_header_nav">
+            <span>Projects</span>
+        </a>
+          <a href="{% url 'subscribeapp:list' %}"class="jcw_header_nav">
+            <span>Subscription</span>
+        </a>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'accountapp:login' %}?next={{ request.path }}"class="jcw_header_nav">
+        <span>login
+        </span>
+            </a>
+        <a href="{% url 'accountapp:create' %}"class="jcw_header_nav">
+        <span>Sign up
+        </span>
+            </a>
+        {% else %}
+        <a href="{% url 'accountapp:detail' pk=user.pk %}"class="jcw_header_nav">
+        <span>MyPage</span>
+            </a>
+        <a href="{% url 'accountapp:logout' %}?next={{ request.path }}"class="jcw_header_nav">
+        <span>logout</span>
+            </a>
+
+        {% endif %}
+    </div>
+</div>

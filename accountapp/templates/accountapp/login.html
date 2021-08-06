@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div style="text-align: center; max-width: 500px; margin: 4rem auto">
+  <div>
+    <h4>Login</h4>
+  </div>
+
+  <div>
+    <form action="" method="post">
+      {% csrf_token %}
+      <!--{{ form }} -->
+      {% bootstrap_form form %}
+      <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3"> <!--col 부모의 넓이를 모두 가져간다 모두가 12 mt margin top 을 정한다. -->
+    </form>
+  </div>
+</div>
+  {% endblock %}
